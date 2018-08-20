@@ -1,0 +1,26 @@
+{
+  "name": "electron-panda",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "./src/main.js",
+  "scripts": {
+    "build:win": "electron-packager ./ %npm_package_name%  --platform=win32 --arch=x64 --icon=./src/panda.ico --asar --overwrite --out=dist --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config.js|node_modules)\"",
+    "build:mac": "electron-packager ./ %npm_package_name%  --platform=darwin --arch=x64 --icon=./src/panda.icns --asar --overwrite --out=dist --ignore=\"(dist|src|docs|.gitignore|LICENSE|README.md|webpack.config.js|node_modules)\"",
+    "start": "electron .",
+    "dev":"electron . --enable-logging --debug"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.1"
+  }
+}
