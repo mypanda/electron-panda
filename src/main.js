@@ -13,7 +13,11 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    title:app.getName()
+    title:app.getName(),
+    webPreferences:{
+      // 禁用node环境，默认是启动node环境
+      nodeIntegration:true
+    }
   })
 
   // and load the index.html of the app.
